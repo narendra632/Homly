@@ -1,5 +1,6 @@
 package com.example.homly
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,12 +11,16 @@ import com.example.homly.fragments.ChatsListFragment
 import com.example.homly.fragments.FavouriteListFragment
 import com.example.homly.fragments.HomeFragment
 import com.example.homly.fragments.ProfileFragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.rpc.context.AttributeContext.Auth
 
 class MainActivity : AppCompatActivity() {
 
     //view Binding
-
     private lateinit var binding: ActivityMainBinding
+
+    // Firebase Auth for auth related tasks
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +30,14 @@ class MainActivity : AppCompatActivity() {
 
         enableEdgeToEdge()
         setContentView(binding.root)
+
+        //get instance of firebase auth for Auth related tasks
+        firebaseAuth = FirebaseAuth.getInstance()
+        //check if user is logged in or not
+        if (firebaseAuth.currentUser == null){
+            //if not logged in, move to LoginOptionsActivity
+            startLoginOptionsActivity()
+        }
 
         // By default (when app open) show HomeFragment
         showHomeFragment()
@@ -93,5 +106,10 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(binding.fragmentsFl.id, profileFragment, "ProfileFragment")
         fragmentTransaction.commit()
+    }
+
+    // To start LoginOptions Activity
+    private fun startLoginOptionsActivity(){
+        startActivity(Intent(this, LoginOptionsActivity::class.java))
     }
 }
