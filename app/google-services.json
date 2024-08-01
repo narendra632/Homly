@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "16495859449",
+    "firebase_url": "https://homly-e768f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "homly-e768f",
+    "storage_bucket": "homly-e768f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16495859449:android:3e93b1c249249c21907428",
+        "android_client_info": {
+          "package_name": "com.example.homly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16495859449-kjjhbsf8e8md0ci2d9bmia9iibuj5c0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.homly",
+            "certificate_hash": "ce3e41987ea16d51c30022c6e9e6e33ffc37d9c9"
+          }
+        },
+        {
+          "client_id": "16495859449-nsscf0s94ejiu0vqnf4hpjvvs65gt8q7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJLSv9gU7hhFSK6sEW_u0SH6eORRuiwQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16495859449-nsscf0s94ejiu0vqnf4hpjvvs65gt8q7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
