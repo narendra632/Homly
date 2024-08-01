@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Height for Toolbar(Custom) in whole project-->
+    <dimen name="m_toolbar_height">55dp</dimen>
+
+    <!--Height for Button in whole project-->
+    <dimen name="m_button_height">60dp</dimen>
+
+</resources>
