@@ -1,4 +1,4 @@
-package com.example.homly
+package com.example.homly.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,13 +6,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.homly.R
 import com.example.homly.databinding.ActivityMainBinding
 import com.example.homly.fragments.ChatsListFragment
 import com.example.homly.fragments.FavouriteListFragment
 import com.example.homly.fragments.HomeFragment
 import com.example.homly.fragments.ProfileFragment
 import com.google.firebase.auth.FirebaseAuth
-import com.google.rpc.context.AttributeContext.Auth
 
 class MainActivity : AppCompatActivity() {
 
